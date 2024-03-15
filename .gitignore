@@ -36,4 +36,5 @@ locales/
 # Environment variables files
 .env
 
+temp.py
 
