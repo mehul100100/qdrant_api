@@ -1,0 +1,39 @@
+# venv directory
+venv/
+
+# Python bytecode
+*.pyc
+*.pyo
+__pycache__/
+
+# Logs
+logs/
+
+# IDE/editor files
+.idea/
+.vscode/
+.vscode-insiders/
+
+# Emacs
+*~
+
+# Flask
+*.pyc
+*.pyo
+__pycache__/
+instance/
+.webassets-cache/
+
+# Caches
+.rpc.cache/
+.eagerpy/
+.mypy_cache/
+.pytest_cache/
+
+# Translations
+locales/
+
+# Environment variables files
+.env
+
+
