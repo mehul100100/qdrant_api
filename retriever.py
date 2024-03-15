@@ -7,10 +7,11 @@ from typing import Optional
 from llama_index.embeddings.huggingface import HuggingFaceEmbedding
 from llama_index.core.vector_stores import VectorStoreQuery
 from llama_index.vector_stores.qdrant import QdrantVectorStore
-
-client = QdrantClient(url="https://c3914f95-6469-48b0-88bf-8e5eebf22c4e.us-east4-0.gcp.cloud.qdrant.io", api_key="7G-Kg43RzP8tQuo3oIt-YAYmI-y0t1GEwdlBbscYsqaCjsYvK8yUBA")
-embed_model = HuggingFaceEmbedding(model_name="sentence-transformers/all-MiniLM-L6-v2")
-
+from dotenv import load_dotenv
+import os
+load_dotenv()
+client = QdrantClient(url=os.environ.get("QDRANT_URL"), api_key=os.environ.get("QDRANT_API_KEY"))
+embed_model = HuggingFaceEmbedding(model_name="BAAI/bge-small-en")
 
 class VectorDBRetriever(BaseRetriever):
     """Retriever over a postgres vector store."""
