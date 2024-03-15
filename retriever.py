@@ -14,7 +14,7 @@ client = QdrantClient(url=os.environ.get("QDRANT_URL"), api_key=os.environ.get("
 embed_model = HuggingFaceEmbedding(model_name="BAAI/bge-small-en")
 
 class VectorDBRetriever(BaseRetriever):
-    """Retriever over a postgres vector store."""
+    """Retriever over a any vector store."""
 
     def __init__(
         self,
